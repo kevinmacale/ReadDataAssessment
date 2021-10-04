@@ -5,7 +5,6 @@ D:\_gitHub\DTN.ReadDataAssessment\DTN.AssessmentExam\DTN.AssessmentExam\bin\Debu
 D:\_gitHub\DTN.ReadDataAssessment\DTN.AssessmentExam\DTN.AssessmentExam\bin\Debug\netcoreapp3.1\DTN.AssessmentExam.dll
 D:\_gitHub\DTN.ReadDataAssessment\DTN.AssessmentExam\DTN.AssessmentExam\bin\Debug\netcoreapp3.1\DTN.AssessmentExam.pdb
 D:\_gitHub\DTN.ReadDataAssessment\DTN.AssessmentExam\DTN.AssessmentExam\bin\Debug\netcoreapp3.1\CoordinateSharp.dll
-D:\_gitHub\DTN.ReadDataAssessment\DTN.AssessmentExam\DTN.AssessmentExam\obj\Debug\netcoreapp3.1\DTN.AssessmentExam.csprojAssemblyReference.cache
 D:\_gitHub\DTN.ReadDataAssessment\DTN.AssessmentExam\DTN.AssessmentExam\obj\Debug\netcoreapp3.1\DTN.AssessmentExam.AssemblyInfoInputs.cache
 D:\_gitHub\DTN.ReadDataAssessment\DTN.AssessmentExam\DTN.AssessmentExam\obj\Debug\netcoreapp3.1\DTN.AssessmentExam.AssemblyInfo.cs
 D:\_gitHub\DTN.ReadDataAssessment\DTN.AssessmentExam\DTN.AssessmentExam\obj\Debug\netcoreapp3.1\DTN.AssessmentExam.csproj.CoreCompileInputs.cache
@@ -13,3 +12,5 @@ D:\_gitHub\DTN.ReadDataAssessment\DTN.AssessmentExam\DTN.AssessmentExam\obj\Debu
 D:\_gitHub\DTN.ReadDataAssessment\DTN.AssessmentExam\DTN.AssessmentExam\obj\Debug\netcoreapp3.1\DTN.AssessmentExam.dll
 D:\_gitHub\DTN.ReadDataAssessment\DTN.AssessmentExam\DTN.AssessmentExam\obj\Debug\netcoreapp3.1\DTN.AssessmentExam.pdb
 D:\_gitHub\DTN.ReadDataAssessment\DTN.AssessmentExam\DTN.AssessmentExam\obj\Debug\netcoreapp3.1\DTN.AssessmentExam.genruntimeconfig.cache
+D:\_gitHub\DTN.ReadDataAssessment\DTN.AssessmentExam\DTN.AssessmentExam\bin\Debug\netcoreapp3.1\_asset.json
+D:\_gitHub\DTN.ReadDataAssessment\DTN.AssessmentExam\DTN.AssessmentExam\bin\Debug\netcoreapp3.1\_strike.json

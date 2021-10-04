@@ -6,6 +6,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="_asset.json" />
+    <None Remove="_strike.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="_asset.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_strike.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CoordinateSharp" Version="2.12.1.1" />
   </ItemGroup>
 

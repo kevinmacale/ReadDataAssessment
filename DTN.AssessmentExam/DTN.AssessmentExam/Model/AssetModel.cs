@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DTN.AssessmentExam.Model
+﻿namespace DTN.AssessmentExam.Model
 {
     /// <summary>
     /// Asset Model

@@ -1,8 +1,24 @@
 {
   "version": 2,
-  "dgSpecHash": "Ztx9zc2rsTLU/NLTTv/OPdROGHSx4DspVnNWUi3+7ljWm1pegCztdIMarGC0vWiCTq43tOCm+i/JvJkBk19PeA==",
+  "dgSpecHash": "mJthOM5PxghVWPp9xwNJxL0f4FI3g1G2COv4jj53rhfj/FJzhiQnKH3u0Iupk+wBMxpxDCxNAmZ+XxSO5RNp9g==",
   "success": true,
   "projectFilePath": "D:\\_gitHub\\DTN.ReadDataAssessment\\DTN.AssessmentExam\\DTN.AssessmentExam\\DTN.AssessmentExam.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\KevinMacale\\.nuget\\packages\\coordinatesharp\\2.12.1.1\\coordinatesharp.2.12.1.1.nupkg.sha512",
+    "C:\\Users\\KevinMacale\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\KevinMacale\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\KevinMacale\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
+    "C:\\Users\\KevinMacale\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
+    "C:\\Users\\KevinMacale\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\KevinMacale\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
+    "C:\\Users\\KevinMacale\\.nuget\\packages\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\KevinMacale\\.nuget\\packages\\system.reflection.typeextensions\\4.7.0\\system.reflection.typeextensions.4.7.0.nupkg.sha512",
+    "C:\\Users\\KevinMacale\\.nuget\\packages\\system.resources.resourcemanager\\4.3.0\\system.resources.resourcemanager.4.3.0.nupkg.sha512",
+    "C:\\Users\\KevinMacale\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\KevinMacale\\.nuget\\packages\\system.runtime.serialization.formatters\\4.3.0\\system.runtime.serialization.formatters.4.3.0.nupkg.sha512",
+    "C:\\Users\\KevinMacale\\.nuget\\packages\\system.runtime.serialization.primitives\\4.3.0\\system.runtime.serialization.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\KevinMacale\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
+    "C:\\Users\\KevinMacale\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
+  ],
   "logs": []
 }

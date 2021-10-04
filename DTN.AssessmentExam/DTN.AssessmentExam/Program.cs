@@ -31,7 +31,7 @@ namespace DTN.AssessmentExam
                     Environment.Exit(0);
                     break;
                 case "y":
-                case "D":
+                case "Y":
                     Start();
                     PrintMenu();
                     break;

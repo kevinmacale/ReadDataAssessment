@@ -54,14 +54,18 @@ TIME COMPLEXITY
 ---------------
 Time complexity is commonly estimated by counting the number of elementary operations performed by the algorithm, supposing that each elementary operation takes a fixed amount of time to perform. Thus, the amount of time taken and the number of elementary operations performed by the algorithm are taken to differ by at most a constant factor.
 
-To this kind of process and algorithm, the time complexity for a particular asset will take an average of:
-![image](https://user-images.githubusercontent.com/33210942/135962593-e4a270df-f7ab-4f79-9f0f-cf882326157d.png)
+Time complexity measures the time taken to execute each statement of code in an algorithm. If a statement is set to execute repeatedly then the number of times that statement gets executed is equal to N multiplied by the time required to run that function each time.
+
+The time taken increases, as N value increases, since the statement is going to get executed N times.
+
+So the Time complexity for this algorithm will depends on the number of times that the code needs to perform an action.
 
 PRODUCTION PERFORMANCE ISSUE
 ---------------------------------------
 
 There are several factors that might cause performance issues like the ff:
 * Reflections
+* Complex algorithm
 * Not enough indexing
 * Not having an lookup values
 

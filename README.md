@@ -49,3 +49,24 @@ CONFIGURATION
  * Choose from the menu
       - y/Y for reloading the Data and printing the alert messages
       - n/N for terminating the application
+
+TIME COMPLEXITY
+---------------
+Time complexity is commonly estimated by counting the number of elementary operations performed by the algorithm, supposing that each elementary operation takes a fixed amount of time to perform. Thus, the amount of time taken and the number of elementary operations performed by the algorithm are taken to differ by at most a constant factor.
+
+To this kind of process and algorithm, the time complexity for a particular asset will take an average of:
+![image](https://user-images.githubusercontent.com/33210942/135962593-e4a270df-f7ab-4f79-9f0f-cf882326157d.png)
+
+PRODUCTION PERFORMANCE ISSUE
+---------------------------------------
+
+There are several factors that might cause performance issues like the ff:
+* Reflections
+* Not enough indexing
+* Not having an lookup values
+
+To speed up the process it would be better to check and refactor all those possible cause of a slow app performance.
+
+
+
+

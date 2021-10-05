@@ -10,6 +10,7 @@ namespace DTN.AssessmentExam.Service
     /// </summary>
     public class LightningStrikeProcessService : ILightningStrikeProcessService
     {
+        private const int LEVEL_OF_DETAILS = 12;
         /// <summary>
         /// This will process lighting strike
         /// </summary>
@@ -32,10 +33,9 @@ namespace DTN.AssessmentExam.Service
             }
 
             var tileSystemService = new TileSystemService();
-            var levelOfDetails = 12;
             foreach (var strikeModel in strikeModels)
             {
-                var result = ProcessStrikeLocation(levelOfDetails, currentRegisteredOwners, assetModels, tileSystemService, strikeModel);
+                var result = ProcessStrikeLocation(LEVEL_OF_DETAILS, currentRegisteredOwners, assetModels, tileSystemService, strikeModel);
                 if (result != null)
                     printMessage?.Invoke(result);
             }

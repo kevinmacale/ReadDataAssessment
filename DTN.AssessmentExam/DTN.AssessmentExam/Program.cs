@@ -47,39 +47,8 @@ namespace DTN.AssessmentExam
         /// </summary>
         private static void Start()
         {
-            var jsonHelperService = new JsonHelperService();
-            var strikeModels = jsonHelperService.DeserializeJsonString<List<StrikeModel>>("_strike.json");
-            var assetModels = jsonHelperService.DeserializeJsonString<List<AssetModel>>("_asset.json");
-
-            if (strikeModels == null || !strikeModels.Any())
-            {
-                Console.WriteLine("Invalid Strike Resources");
-                return;
-            }
-
-            if (assetModels == null || !assetModels.Any())
-            {
-                Console.WriteLine("Invalid Asset Resources");
-                return;
-            }
-
-            var tileSystemService = new TileSystemService();
-            var levelOfDetails = 12;
-            foreach (var strikeModel in strikeModels)
-            {
-                tileSystemService.LatLongToPixelXY(strikeModel.latitude, strikeModel.longitude, levelOfDetails, out int pixelX, out int pixelY);
-                tileSystemService.PixelXYToTileXY(pixelX, pixelY, out int tileX, out int tileY);
-                var quadKey = tileSystemService.TileXYToQuadKey(tileX, tileY, levelOfDetails);
-
-                var strikedAsset = assetModels.FirstOrDefault(x => x.quadKey == quadKey);
-                if (strikedAsset != null && !IsAssetOwnerAlreadyRegistered(strikedAsset.assetOwner) && IsValidToRaiseAnAlert(strikeModel.flashType))
-                {
-                    _strikedOwners.Add(strikedAsset.assetOwner);
-                    PrintAlertMessage(strikedAsset.assetOwner, strikedAsset.assetName);
-                }
-            }
-
-            Console.WriteLine();
+            var lightningStrikeProcessService = new LightningStrikeProcessService();
+            lightningStrikeProcessService.ProcessLightningStrike(PrintAlertMessage, _strikedOwners);
         }
 
         /// <summary>
@@ -87,47 +56,28 @@ namespace DTN.AssessmentExam
         /// </summary>
         /// <param name="assetOwner"></param>
         /// <param name="assetName"></param>
-        private static void PrintAlertMessage(string assetOwner, string assetName)
+        private static void PrintAlertMessage(AssetModel assetModel)
         {
-            if (string.IsNullOrEmpty(assetOwner))
+            if (assetModel == null)
+            {
+                Console.WriteLine("Invalid Asset Model");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(assetModel.assetOwner))
             {
                 Console.WriteLine("Invalid Asset Owner");
                 return;
             }
 
-            if (string.IsNullOrEmpty(assetName))
+            if (string.IsNullOrEmpty(assetModel.assetName))
             {
                 Console.WriteLine("Invalid Asset Name");
                 return;
             }
 
-            Console.WriteLine($"Lighting Alert for {assetOwner}:{assetName}");
-        }
-
-        /// <summary>
-        /// Check if flash type was cloud to ground or cloud to cloud
-        /// </summary>
-        /// <param name="flashType"></param>
-        /// <returns></returns>
-        private static bool IsValidToRaiseAnAlert(FlashTypeEnum flashType)
-        {
-            return flashType != FlashTypeEnum.Heartbeat;
-        }
-
-        /// <summary>
-        /// Check if asset owner already received an strike
-        /// </summary>
-        /// <param name="assetOwner"></param>
-        /// <returns></returns>
-        private static bool IsAssetOwnerAlreadyRegistered(string assetOwner)
-        {
-            if (string.IsNullOrEmpty(assetOwner))
-            {
-                Console.WriteLine("Invalid Asset Owner");
-                return false;
-            }
-
-            return _strikedOwners.Contains(assetOwner);
+            _strikedOwners.Add(assetModel.assetOwner);
+            Console.WriteLine($"Lighting Alert for {assetModel.assetOwner}:{assetModel.assetName}");
         }
     }
 }

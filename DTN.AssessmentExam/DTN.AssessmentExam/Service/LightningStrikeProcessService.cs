@@ -1,6 +1,7 @@
 ﻿using DTN.AssessmentExam.Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace DTN.AssessmentExam.Service
@@ -56,9 +57,14 @@ namespace DTN.AssessmentExam.Service
             tileSystemService.PixelXYToTileXY(pixelX, pixelY, out int tileX, out int tileY);
             var quadKey = tileSystemService.TileXYToQuadKey(tileX, tileY, levelOfDetails);
 
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
             if (assetModels.TryGetValue(quadKey, out AssetModel strikedAsset))
                 if (!IsAssetOwnerAlreadyRegistered(strikedAsset.assetOwner, currentRegisteredOwners) && IsValidToRaiseAnAlert(strikeModel.flashType))
+                {
+                    stopwatch.Stop();
                     return strikedAsset;
+                }
 
             return null;
         }

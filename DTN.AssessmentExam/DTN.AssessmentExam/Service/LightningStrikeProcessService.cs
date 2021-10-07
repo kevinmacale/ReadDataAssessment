@@ -18,7 +18,7 @@ namespace DTN.AssessmentExam.Service
         public void ProcessLightningStrike(Action<AssetModel> printMessage, HashSet<string> currentRegisteredOwners)
         {
             var jsonHelperService = new JsonHelperService();
-            var strikeModels = jsonHelperService.DeserializeJsonString<IEnumerable<StrikeModel>>("_strike.json");
+            var strikeModels = jsonHelperService.DeserializeJsonString<List<StrikeModel>>("_strike.json");
             var assetModels = jsonHelperService.DeserializeAssetsToDictionary("_asset.json");
 
             if (strikeModels == null || !strikeModels.Any())
@@ -51,7 +51,7 @@ namespace DTN.AssessmentExam.Service
         /// <param name="tileSystemService"></param>
         /// <param name="levelOfDetails"></param>
         /// <param name="strikeModel"></param>
-        private AssetModel ProcessStrikeLocation(int levelOfDetails, HashSet<string> currentRegisteredOwners, Dictionary<string, AssetModel> assetModels, TileSystemService tileSystemService, StrikeModel strikeModel)
+        public AssetModel ProcessStrikeLocation(int levelOfDetails, HashSet<string> currentRegisteredOwners, Dictionary<string, AssetModel> assetModels, TileSystemService tileSystemService, StrikeModel strikeModel)
         {
             tileSystemService.LatLongToPixelXY(strikeModel.latitude, strikeModel.longitude, levelOfDetails, out int pixelX, out int pixelY);
             tileSystemService.PixelXYToTileXY(pixelX, pixelY, out int tileX, out int tileY);

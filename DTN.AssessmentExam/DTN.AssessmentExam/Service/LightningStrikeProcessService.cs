@@ -18,7 +18,7 @@ namespace DTN.AssessmentExam.Service
         public void ProcessLightningStrike(Action<AssetModel> printMessage, HashSet<string> currentRegisteredOwners)
         {
             var jsonHelperService = new JsonHelperService();
-            var strikeModels = jsonHelperService.DeserializeJsonString<List<StrikeModel>>("_strike.json");
+            var strikeModels = jsonHelperService.DeserializeJsonString<IEnumerable<StrikeModel>>("_strike.json");
             var assetModels = jsonHelperService.DeserializeAssetsToDictionary("_asset.json");
 
             if (strikeModels == null || !strikeModels.Any())

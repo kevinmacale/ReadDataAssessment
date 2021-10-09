@@ -35,9 +35,7 @@ namespace DTN.AssessmentExam.Service
         /// <returns></returns>
         public Dictionary<string, AssetModel> DeserializeAssetsToDictionary(string fileName)
         {
-            var jsonString = GetFullDirectoryPath(fileName);
-            var assetModels = JsonSerializer.Deserialize<List<AssetModel>>(jsonString);
-
+            var assetModels = DeserializeJsonString<IEnumerable<AssetModel>>(fileName);
             if (assetModels == null || !assetModels.Any())
                 return null;
 
